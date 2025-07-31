@@ -459,3 +459,90 @@ remote: Resolving deltas: 100% (21/21), done.
 To github.com:GedIra/theGym_Git_Exercise_Solutions_Clone.git
  * [new branch]      main -> main
 ```
+
+### Exercise 2
+```bash
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ touch footer.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Add: Footer Page"
+[ft/footer 0f3ccae] Add: Footer Page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Feat: Add footer contents"
+[ft/footer b5d0ba1] Feat: Add footer contents
+ 1 file changed, 10 insertions(+)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/footer 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 636 bytes | 159.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/footer
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git merge --squash ft/footer
+Updating 5e6b8b6..b5d0ba1
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 footer.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git log
+commit 5e6b8b6bad48c3d45fd69ce860ca70753da450e7 (HEAD -> ft/squashing, origin/main, main)
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 11:41:25 2025 +0200
+
+    Update: Bundle 4 Exercise 1 Ready
+
+commit be3d672f4bfbdc6e203592929d3902882cf4617d (git-copy/main)
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 11:39:07 2025 +0200
+
+    feat: Home Page Heading
+
+commit dc313f33097b3517e7ba94103f8dc03dfad50c13
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 11:18:47 2025 +0200
+
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "footer changes squashing"
+[ft/squashing 64118f6] footer changes squashing
+ 1 file changed, 10 insertions(+)
+ create mode 100644 footer.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 394 bytes | 197.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/squashing
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$
+```
