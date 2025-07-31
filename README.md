@@ -571,3 +571,31 @@ gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solution
  rename home.html => index.html (100%)
 gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push
 ```
+### Exercise 2
+```bash
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym$ git clone git@github.com:GedIra/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 1.14 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym$ cd git-cafe-exercise/
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/git-cafe-exercise$ code .
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/git-cafe-exercise$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/git-cafe-exercise$ git commit -m "feat: Change the main Title"
+[main 6153e66] feat: Change the main Title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/git-cafe-exercise$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:GedIra/git-cafe-exercise.git
+   d1d3f9c..6153e66  main -> main
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/git-cafe-exercise$
+```
