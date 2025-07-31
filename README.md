@@ -230,3 +230,131 @@ To github.com:GedIra/theGym_Git_Exercise_Solutions.git
    ab8b301..9f5a4f2  ft/service-redesign -> ft/service-redesign
 gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$
 ```
+
+## Bundle 3
+### Exercise 1
+
+```bash
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git branch ft/team-page
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git branch
+  dev
+  ft/bundle-2
+* ft/service-redesign
+  ft/team-page
+  main  
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ touch team.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add team.html 
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Add: Team Page"
+[ft/team-page e021910] Add: Team Page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 447 bytes | 223.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/team-page
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout main
+Switched to branch 'main'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git log
+commit e0219107e0d47b5cb0e054d1bce672d07b992faa (HEAD -> ft/team-page, origin/ft/team-page)
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 10:23:51 2025 +0200
+
+    Add: Team Page
+
+commit 9f5a4f25ed6c041f735675fe757380a7c48452aa (origin/ft/service-redesign, ft/service-redesign)
+Merge: ab8b301 5776a8b
+Author: GedIra <irankundag65@gmail.com>
+Date:   Wed Jul 30 12:01:32 2025 +0200
+
+    Merge branch 'main' into ft/service-redesign
+
+commit 5776a8b31adca40723437d8152cd5a6c881f00f9
+Author: GedIra <irankundag65@gmail.com>
+Date:   Wed Jul 30 12:00:00 2025 +0200
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git cherry-pick e0219107e0d47b5cb0e054d1bce672d07b992faa
+[ft/contact-page ee8559c] Add: Team Page
+ Date: Thu Jul 31 10:23:51 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Add: Contact Page & Team page"
+[ft/contact-page 093b5b6] Add: Contact Page & Team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/contact-page 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 724 bytes | 362.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/contact-page
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ touch faq.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Add: FAQ Page"
+[ft/faq-page 23dc47f] Add: FAQ Page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/faq-page
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git revert e0219107e0d47b5cb0e054d1bce672d07b992faa
+[ft/faq-page f6c17ca] Revert "Add: Team Page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Delete: Team Page"
+[ft/faq-page d0cec10] Delete: Team Page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 548 bytes | 182.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+   23dc47f..d0cec10  ft/faq-page -> ft/faq-page
+```
