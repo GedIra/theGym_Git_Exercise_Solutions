@@ -425,3 +425,37 @@ To github.com:GedIra/theGym_Git_Exercise_Solutions.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ 
 ```
+
+## Bundle 4
+### Exercise 1
+```bash
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git remote add git-copy git@github.com:GedIra/theGym_Git
+_Exercise_Solutions_Clone.git
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "feat: Home Page Heading"
+[main be3d672] feat: Home Page Heading
+ 1 file changed, 1 insertion(+)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+   dc313f3..be3d672  main -> main
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push git-copy
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (48/48), done.
+Writing objects: 100% (54/54), 10.94 KiB | 746.00 KiB/s, done.
+Total 54 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To github.com:GedIra/theGym_Git_Exercise_Solutions_Clone.git
+ * [new branch]      main -> main
+```
