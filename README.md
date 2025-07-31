@@ -358,3 +358,70 @@ remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
 To github.com:GedIra/theGym_Git_Exercise_Solutions.git
    23dc47f..d0cec10  ft/faq-page -> ft/faq-page
 ```
+
+### Exercise 2
+```bash
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Feat: Modified The home page"
+[main a47ea43] Feat: Modified The home page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 168.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+   ffbb02f..a47ea43  main -> main
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git log
+commit 0126abd05ec82a1d1f3ab01e77c1218dfcc3731e (HEAD -> ft/home-page-redesign)
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 10:41:39 2025 +0200
+
+    Delete: Team Page
+
+commit cdcb0e1bec725a7213e25abd570cb13888257320
+Author: GedIra <irankundag65@gmail.com>
+Date:   Thu Jul 31 10:39:31 2025 +0200
+
+    Revert "Add: Team Page"
+    
+    This reverts commit e0219107e0d47b5cb0e054d1bce672d07b992faa.
+
+commit 2feb8e2a121710ac217ea3d2955e289ecf8ae779
+Author: GedIra <irankundag65@gmail.com>
+        gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git add --all
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git commit -m "Update: Home page"
+[ft/home-page-redesign a68eef8] Update: Home page
+ 1 file changed, 5 insertions(+)
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ git push --set-upstream origin ft/home-page-redesign 
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.85 KiB | 632.00 KiB/s, done.
+Total 17 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/GedIra/theGym_Git_Exercise_Solutions/pull/new/ft/home-page-redesign
+remote: 
+To github.com:GedIra/theGym_Git_Exercise_Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+gedira@gedira-HP-EliteBook-840-G3:~/projects/TheGym/theGym_Git_Exercise_Solutions$ 
+```
